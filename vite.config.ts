@@ -9,9 +9,7 @@ import { kitRoutes } from 'vite-plugin-kit-routes';
 export default defineConfig({
 	plugins: [
 		UnoCSS({
-			extractors: [
-				extractorSvelte(),
-			],
+			extractors: [extractorSvelte()],
 		}),
 		Icons({
 			compiler: 'svelte',
@@ -20,18 +18,11 @@ export default defineConfig({
 		sveltekit(),
 		kitRoutes({
 			LINKS: {
-				domain: `https://pr.ryoppippi.com`,
-				repo: 'https://github.com/ryoppippi/pr.ryoppippi.com',
-				username: 'ryoppippi',
+				domain: `https://pr.ojoxux.com`,
+				repo: 'https://github.com/Ojoxux/pr.ojoxux.com',
+				username: 'Ojoxux',
 				includeYourOwnPRs: 'true', // Include your own PRs 'true' or 'false'
-				hideList: ([
-					'ryoppippi/ryoppippi.com',
-					'ryoppippi/talks',
-					'ryoppippi/cv',
-					'samchon/*',
-					'wrtnlabs/*',
-					'StackOneHQ/*',
-				]).join(','),
+				hideList: [].join(','),
 			},
 		}),
 	],
